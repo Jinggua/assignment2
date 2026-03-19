@@ -68,6 +68,6 @@ int main(void) {
         }
     }
 
-    fprintf(stdout, "Bye.");
+    fprintf(stdout, "Bye.\n");
     return 0;
 }
