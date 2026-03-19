@@ -2,7 +2,7 @@
 #ifndef _SENSOR_READING_STACK_H_
 #define _SENSOR_READING_STACK_H_
 
-#include "SensorReading.h"
+#include "sensorReading.h"
 
 #include <stdbool.h>
 

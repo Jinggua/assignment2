@@ -1,5 +1,5 @@
 #include "sensorReadingQueue.h"
-
+#include <string.h>
 /* ---------- FIFO Queue (circular) ---------- */
 void q_Init(SR_Queue *q) {
     // TODO
