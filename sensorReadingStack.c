@@ -1,5 +1,5 @@
 
-#include "SensorReadingStack.h"
+#include "sensorReadingStack.h"
 
 void s_Init(SR_Stack *s) {
     // TODO 
