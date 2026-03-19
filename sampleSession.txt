@@ -1,0 +1,58 @@
+Sensor Buffer (FIFO + Undo Stack). Type 'h' for help.
+> a 1
+ENQUEUE: ts=0 ms, value=1.000
+
+> a 2
+ENQUEUE: ts=100 ms, value=2.000
+
+> a 3
+ENQUEUE: ts=200 ms, value=3.000
+
+> a 5.1
+ENQUEUE: ts=300 ms, value=5.100
+
+> a 6
+ENQUEUE: ts=400 ms, value=6.000
+
+> pv
+ ts=0 ms, value=1.000
+ ts=100 ms, value=2.000
+ ts=200 ms, value=3.000
+ ts=300 ms, value=5.100
+ ts=400 ms, value=6.000
+
+> g
+DEQUEUE: ts=0 ms, value=1.000
+
+> u
+UNDO removed: ts=400 ms, value=6.000
+
+> pv
+ ts=100 ms, value=2.000
+ ts=200 ms, value=3.000
+ ts=300 ms, value=5.100
+
+> pu
+ ts=300 ms, value=5.100
+ ts=200 ms, value=3.000
+ ts=100 ms, value=2.000
+ ts=0 ms, value=1.000
+
+> a 4
+ENQUEUE: ts=400 ms, value=4.000
+
+> a 7
+ENQUEUE: ts=500 ms, value=7.000
+
+> pv
+ ts=100 ms, value=2.000
+ ts=200 ms, value=3.000
+ ts=300 ms, value=5.100
+ ts=400 ms, value=4.000
+ ts=500 ms, value=7.000
+
+> avg 6
+Average of most recent 5 = 4.220
+
+> q
+Bye.
