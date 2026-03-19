@@ -1,6 +1,6 @@
 
 #include "sensorReadingStack.h"
-
+#include <string.h>
 void s_Init(SR_Stack *s) {
     // TODO 
     // (void)s;
